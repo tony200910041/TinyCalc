@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+		<meta name="description" content="TinyCalc 2.0">
+		<title>TinyCalc 2.0</title>
+	</head>
+	<body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 227);" alink="black" link="black" vlink="black">
+		<h1>
+			<font face="Arial" color="#b30909">
+				TinyCalc: memory usage
+			</font>
+		</h1>
+		<font color="black">
+			<br>
+			<font color="red">Important notes</font>: All the variables in this part will be saved in a file called TINYCALC_MEMORY which is located at the same directory as the TinyCalc executable.
+			<br>
+			<br>
+			<h2>Answer</h2>
+			<br>
+			The last answer will be saved automatically. Use [ans] to read it.
+			<table style="width: 100%">
+				<tr>
+					<td>1+2+3+4+5 (output=15)</td>
+					<td>then [ans]/3 (output=5)</td>
+				</tr>
+				<tr>
+					<td>2^3 (output=8)</td>
+					<td>then [ans]^3 (output=512)</td>
+				</tr>
+			</table>
+			<br>
+			Please be reminded that [ans] updates automatically when a calculation result is generated. As such, it is not a reliable variable and may change unexpectedly.
+			<br>
+			<br>
+			<h2>Memory</h2>
+			<br>
+			There are ten memory variables in TinyCalc.
+			<br>
+			To save a calculation result, use save[*], and to retrieve, use [M*] or [mem*], where * is an integer between 0 and 9 inclusive.
+			<br>
+			<table style="width: 100%">
+				<tr>
+					<td>3*4*5save3 (output=60)</td>
+					<td>then 1+[mem3]/5 (output=13)</td>
+				</tr>
+				<tr>
+					<td>2^20save9 (output=1048576)</td>
+					<td>then [M9]^(1/10 (output=4)</td>
+				</tr>
+			</table>
+			<br>
+			<br>
+			<h2>Temporary variables</h2>
+			<br>
+			There are ten temporary variables in TinyCalc. Unlike memory variables, they can be modified by multi-return methods.
+			<br>
+			You can use tv* to save a calculation result, and use [tv*], [tmpvar*] or [var*] to retrieve a result, where * is an integer between 0 and 9 inclusive. Note that it is not recommended to use temporary variables to save calculation results as they may be modified.
+			<br>
+			<table style="width: 100%">
+				<tr>
+					<td>quad(9,25,16 (output=49)</td>
+					<td>then [tv1] (output=-1)</td>
+					<td>then [tmpvar2] (output=-1.7778) (approximately)</td>
+					<td>then [var3] (output=-1.3889) (approximately)</td>
+				</tr>
+			</table>
+			<br>
+			<br>
+			<a href="/doc/index.html">Home-page</a>&nbsp;&nbsp;<a href="/doc/general.html">General usage</a>&nbsp;&nbsp;<a href="/doc/scientific.html">Scientific functions</a>
+		</font>
+	</body>
+</html>

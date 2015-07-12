@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+		<meta name="description" content="TinyCalc 2.0">
+		<title>TinyCalc 2.0</title>
+	</head>
+	<body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 227);" alink="black" link="black" vlink="black">
+		<h1>
+			<font face="Arial" color="#b30909">
+				TinyCalc: scientific functions
+			</font>
+		</h1>
+		<font color="black">
+			<br>
+			<h2>Functions:</h2>
+			<br>
+			TinyCalc supports different scientific functions and constants.
+			<br>
+			You may enter "function" to obtain a list of function name, and enter "const" to obtain a table of constants.
+			<br>
+			Functions can be called by the format function_name(argument, argument...), which can be entered in either uppercase or lowercase.
+			<br>
+			Some functions may return more than one value. See "Memory usage" for further detains".
+			<br><br>
+			All methods defined in java.lang.math can be used.
+			<br>
+			Other methods are listed here:
+			<!--List of function details-->
+			<br><br>
+			<br><b>log</b>
+			<ul>
+				<li>argument: the logarithm base b and the parameter a in an expression log<sub>b</sub>a.</li>
+				<li>return: the result of log<sub>b</sub>a</li>
+			</ul>
+			<br><b>ln</b>
+			<ul>
+				<li>argument: the number a that has to be taken a natural logarithm (ln a)</li>
+				<li>return: the result of ln(a)</li>
+			</ul>
+			<br><b>fact</b>
+			<ul>
+				<li>argument: a non-negative integer x being the argument of factorial operation (x!)</li>
+				<li>return: the result of x!</li>
+			</ul>
+			<br><b>p</b>
+			<ul>
+				<li>argument: the total number of elements n, and the number of selected elements r</li>
+				<li>return: the result of <sub>n</sub>P<sub>r</sub> (i.e. the number of possible ordered arrangements if r items are selected).</li>
+			</ul>
+			<br><b>c</b>
+			<ul>
+				<li>argument: the total number of elements n, and the number of selected elements r</li>
+				<li>return: the result of <sub>n</sub>C<sub>r</sub> (i.e. the number of possible unordered combinations if r items are selected).</li>
+			</ul>
+			<br><b>sum</b>
+			<ul>
+				<li>argument: the lower limit (start), the upper limit (end), and the step parameter</li>
+				<li>the step parameter indicates the common difference between items
+				<li>return: the sum of sequence start, start+step, ... end</li>
+				<li>example: sum(2,5,1) returns 2+3+4+5=14
+			</ul>
+			<br><b>product</b>
+			<ul>
+				<li>argument: the lower limit (start), the upper limit (end), and the step parameter</li>
+				<li>the step parameter indicates the common difference between items
+				<li>return: the product of sequence start, start+step, ... end</li>
+				<li>example: product(3,7,2) returns 3*5*7=105
+			</ul>
+			<br><b>delta</b>
+			<ul>
+				<li>argument: a, b and c in a quadratic function f(x)=ax<sup>2</sup>+bx+c</li>
+				<li>return: b<sup>2</sup>-4ac, the discriminant of the equation f(x)=0</li>
+				<li>example: delta(9,25,16) returns 9^2-4*25*16=49</li>
+			</ul>
+			<br><b>quad</b>
+			<ul>
+				<li>argument: a, b and c in a quadratic function f(x)=ax<sup>2</sup>+bx+c</li>
+				<li>return: an array of results: delta(a,b,c), x1, x2, vert1 and vert2, where x1 and x2 are the real roots of the equation f(x)=0,  or the real and imaginary part of the unreal roots of the equation f(x)=0, and (vert1, vert2) is the vertex coordinate of the graph of y=f(x).</li>
+				<li>example: quad(9,25,16) returns {49, -1, -1.7778, -1.3889, -1.3611} (approximately)
+			</ul>
+			<br><b>heron</b>
+			<ul>
+				<li>argument: the three sides of a triangle</li>
+				<li>return: the area of the triangle, calculated by Heron's Formula</li>
+				<li>example: heron(8,5,5) returns 12 (the area of triangle)
+			</ul>
+			<br><b>opside</b>
+			<ul>
+				<li>argument: two of the three sides of a triangle, and the included angle</li>
+				<li>return: the side opposite to the included angle</li>
+				<li>example: opside(3,5,60-d returns 4.3589 (approximately)</li>
+			</ul>
+			<br><b>area</b>
+			<ul>
+				<li>argument: two of the three sides of a triangle, and the included angle</li>
+				<li>return: the area of the triangle</li>
+				<li>example: area(3,5,60-d returns 12.99</li>
+			</ul>
+			<br><b>angle</b>
+			<ul>
+				<li>argument: the three sides of a triangle</li>
+				<li>return: an array of angles, in radians, which are the opposite angles of the three sides respectively</li>
+				<li>example: angle(3,4,5) returns {0.6435, 0.9273, 1.5708} (approximately)
+			</ul>
+			<br><b>csc</b>
+			<ul>
+				<li>argument: an argument a of the expression csc a</li>
+				<li>return: csc a</li>
+			</ul>
+			<br><b>sec</b>
+			<ul>
+				<li>argument: an argument a of the expression sec a</li>
+				<li>return: sec a</li>
+			</ul>
+			<br><b>cot</b>
+			<ul>
+				<li>argument: an argument a of the expression cot a</li>
+				<li>return: cot a</li>
+			</ul>
+			<br><b>acsc</b>
+			<ul>
+				<li>argument: an argument a of the expression acsc a</li>
+				<li>return: acsc a</li>
+			</ul>
+			<br><b>asec</b>
+			<ul>
+				<li>argument: an argument a of the expression asec a</li>
+				<li>return: asec a</li>
+			</ul>
+			<br><b>acot</b>
+			<ul>
+				<li>argument: an argument a of the expression acot a</li>
+				<li>return: acot a</li>
+			</ul>
+			<br><b>dist</b>
+			<ul>
+				<li>argument: the coordinates of two points (x1, y1) and (x2, y2)</li>
+				<li>return: the distance between the two points</li>
+				<li>example: dist(1,1,4,5) returns 5 (the distance between the point (1,1) and the point (4,5))</li>
+			</ul>
+			<br><b>slope</b>
+			<ul>
+				<li>argument: the coordinates of two points (x1, y1) and (x2, y2)</li>
+				<li>return: the slope of the straight line passing through the two points</li>
+				<li>example: slope(1,1,2,3) returns 2
+			</ul>			
+			<br><b>yint</b>			
+			<ul>
+				<li>argument: the coordinates of two points (x1, y1) and (x2, y2)</li>
+				<li>return: the y-intercept of the straight line passing through the two points</li>
+				<li>example: yint(1,1,2,3 returns -1</li>
+			</ul>			
+			<br><b>distpl</b>			
+			<ul>
+				<li>argument: the coefficient A, B, C in the equation of straight line Ax+By+C=0, and the two coordinates x, y of a point (x,y)</li>
+				<li>return: the shortest distance (perpendicular distance) between the line and the point</li>
+				<li>example: distpl(3,4,-5,1,2 returns 1.2</li>
+			</ul>			
+			<br><b>det</b>			
+			<ul>
+				<li>argument: the nine elements, from left to right, top to bottom, in a 3x3 matrix</li>
+				<li>return: the determinant of the matrix</li>
+			</ul>			
+			<br><b>simu2</b>			
+			<ul>
+				<li>argument: the value a, b, c, d, e, f in a system of linear equation: ax+by=c and dx+ey=f</li>
+				<li>return: an array {x, y}</li>
+			</ul>
+			<br><b>isprime</b>
+			<ul>
+				<li>argument: a integer n, where n>=2</li>
+				<li>return: 1 if n is a prime number, and 0 if not</li>
+			</ul>
+			<br><b>ran</b>
+			<ul>
+				<li>argument: the lower limit and the upper limit</li>
+				<li>return: a random number between the limits</li>
+			</ul>
+			<br><b>ranint</b>			
+			<ul>
+				<li>argument: the lower limit and the upper limt, must be integers</li>
+				<li>return: a random integer between the limits</li>
+			</ul>
+			<br><br>
+			<h2>Special conversion:</h2>
+			<br>
+			TinyCalc uses radian as the default angle unit. Currently, TinyCalc only supports radian and degree.
+			<br>
+			If you want to convert a value between radian and degree, use -r to specify that the original value is in radian, and use -d for degree.
+			<br><br>
+			<table style="width:100%">
+				<tr>
+					<td>sin(30-d</td>
+					<td>0.5</td>
+				</tr>
+				<tr>
+					<td>acos(0.5)-r</td>
+					<td>0</td>
+				<tr>
+			</table>
+			You can also type "f", "surd" or "sixty" at the end of the expression to format the result as a fraction, surd or sixty-degree value respectively.
+			<br>
+			<table style="width:100%">
+				<tr>
+					<td>4/3-1f</td>
+					<td>1/3</td>
+				</tr>
+				<tr>
+					<td>tan(30-dsurd</td>
+					<td>1/3(sqrt)3</td>
+				</tr>
+					<td>1.6sixty</td>
+					<td>1(degree)36'0"</td>
+				</tr>
+			</table>
+			<br>
+			<br>
+			<a href="/doc/index.html">Home-page</a>&nbsp;&nbsp;<a href="/doc/general.html">General usage</a>&nbsp;&nbsp;<a href="/doc/memory.html">Memory usage</a>
+		</font>
+	</body>
+</html>
